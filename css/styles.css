@@ -1,2 +1,70 @@
 ﻿body {
+    padding-top: 3%;
+}
+
+/*Title*/
+#title {
+    left: 25%;
+}
+
+#smile-img {
+    color: #f4d44e;
+    box-shadow: 10px 10px 23px 1px rgba(0, 0, 0, .2);
+}
+
+h1, h4 {
+    display: inline-block;
+}
+
+.btn-danger:hover {
+    display: none;
+}
+
+.btn:hover {
+    padding: 5px;
+    border: solid black;
+}
+
+/*Registration Form*/
+.navbar {
+    border-bottom: 1.5px solid;
+    padding-bottom: 0;
+}
+
+#col-navbar {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding-right: 5%;
+    margin-bottom: 0;
+}
+
+ul > li {
+    float: right;
+}
+
+#registration-form {
+    border: 3px solid;
+    /*display: none;*/
+    top: 5%;
+    left: 33%;
+    padding-bottom: 3%;
+    background-color: #f4d44e;
+}
+
+#registration-form:hover {
+    border: 4px solid;
+}
+
+.btn-close-white {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.col-auto {
+    margin-top: 0;
+    margin-bottom: 0;
 }

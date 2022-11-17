@@ -3,8 +3,93 @@
 <head>
     <meta charset="utf-8" />
     <title>Pop-out window</title>
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/30d4249c64.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" /> <!--Bootstrap-->
+    <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
 
+    <!--Title Container-->
+    <div class="container text-center w-50 mb-5 position-fixed" id="title">
+        <div class="row">
+            <div class="col-12">
+                <i class="fa-sharp fa-solid fa-face-grin-wink fa-10x rounded-circle bg-black" id="smile-img"></i>
+            </div>
+            <div class="col-lg-6 pt-2">
+                <h1>Привіт, Друже!</h1>
+            </div>
+            <div class="col-lg-6 pt-4 pb-3">
+                <h4>Бажаєш зареєструватись?</h4>
+            </div>
+            <div class="col-lg-6">
+                <a href="#" class="btn btn-success w-50 mb-2 float-lg-end float-none" id="btnYes">Так</a>
+            </div>
+            <div class="col-lg-6">
+                <a href="#" class="btn btn-danger w-50 mb-2 float-lg-start float-none" id="btnNo">Ні</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Pop-up Registration Window-->
+    <form action="/" method="post" class="position-fixed" id="registration-form">
+        <div class="container w-100 pt-0 mt-5">
+            <div class="row g-3 align-items-center" style="margin-bottom: 5%;">
+                <div class="col-12" id="col-navbar">
+                    <nav class="navbar">
+                        <ul>
+                            <li><span class="btn-close-white" id="btnTitleClose">&times;</span></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!--style="margin-bottom: 3%;"-->
+                    <label for="txtEmail" class="col-form-label">Email</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" id="txtEmail" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-auto">
+                    <span id="emailHelp" class="form-text" style="margin-top: 0;">
+                        Your email won't be shared with others
+                    </span>
+                </div>
+            </div>
+
+            <div class="row g-3 align-items-center" style="margin-bottom: 5%;">
+                <div class="col-auto">
+                    <label for="txtPassword" class="col-form-label">Password</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" id="txtPassword" class="form-control" aria-describedby="passwordHelp">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelp" class="form-text">
+                        Must be 8-20 characters long.
+                    </span>
+                </div>
+            </div>
+
+            <div class="row g-3 align-items-center profile-pic-div" style="margin-bottom: 5%;">
+                <div class="col-auto">
+                    <img src="images/photo.jpg" id="photo" class="border border-dark rounded-circle" style="height: 200px;" />
+                    <input type="file" class="form-control d-none" id="photo-file" /> <!--d-none is a display:none in css-->
+                </div>
+                <div class="col-auto">
+                    <label class="btn btn-secondary" for="photo-file" id="btn-photo-upload">Choose Photo</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign up</button>
+            <button type="reset" class="btn btn-warning float-lg-none float-end">Reset Form</button>
+        </div>
+    </form>
+
+    <!--JS-->
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
+    <script src="js/upload-photo.js"></script> <!--Upload Photo-->
+    <script src="js/pop-up.js"></script> <!--Pop-up Window-->
 </body>
 </html>
