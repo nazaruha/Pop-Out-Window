@@ -36,6 +36,7 @@
     <!--Pop-up Registration Window-->
     <form action="/" method="post" class="position-fixed" id="registration-form">
         <div class="container w-100 pt-0 mt-5">
+
             <div class="row g-3 align-items-center" style="margin-bottom: 5%;">
                 <div class="col-12" id="col-navbar">
                     <nav class="navbar">
@@ -44,12 +45,15 @@
                         </ul>
                     </nav>
                 </div>
+            </div>
+
+            <div class="row g-3 align-items-center" style="margin-bottom: 5%;">
                 <div class="col-auto">
                     <!--style="margin-bottom: 3%;"-->
                     <label for="txtEmail" class="col-form-label">Email</label>
                 </div>
                 <div class="col-auto">
-                    <input type="email" id="txtEmail" class="form-control" aria-describedby="emailHelp">
+                    <input type="email" id="txtEmail" class="form-control" placeholder="example@exp.com" aria-describedby="emailHelp">
                 </div>
                 <div class="col-auto">
                     <span id="emailHelp" class="form-text" style="margin-top: 0;">
@@ -72,6 +76,15 @@
                 </div>
             </div>
 
+            <div class="row g-3 align-items-center" style="margin-bottom: 5%;">
+                <div class="col-auto">
+                    <label for="txtPhone" class="col-form-label">Phone</label>
+                </div>
+                <div class="col-auto">
+                    <input id="txtPhone" class="form-control" placeholder="+(38)-XXX-XXX-XX-XX">
+                </div>
+            </div>
+
             <div class="row g-3 align-items-center profile-pic-div" style="margin-bottom: 5%;">
                 <div class="col-auto">
                     <img src="images/photo.jpg" id="photo" class="border border-dark rounded-circle" style="height: 200px;" />
@@ -90,6 +103,14 @@
     <!--JS-->
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
     <script src="js/upload-photo.js"></script> <!--Upload Photo-->
+    <script src="lib/imask/dist/imask.min.js"></script> <!--imask. Guide: https://imask.js.org/guide.html-->
+    <script>
+        var txtPhone = document.getElementById('txtPhone');
+        var maskOptions = {
+            mask: '+({38})-000-000-00-00'
+        };
+        var mask = IMask(txtPhone, maskOptions);
+    </script> <!--Script for phone number using imask-->
     <script src="js/pop-up.js"></script> <!--Pop-up Window-->
 </body>
 </html>

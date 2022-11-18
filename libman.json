@@ -10,6 +10,11 @@
         "css/bootstrap.css",
         "js/bootstrap.bundle.min.js"
       ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "imask@6.4.3",
+      "destination": "lib/imask/"
     }
   ]
 }
